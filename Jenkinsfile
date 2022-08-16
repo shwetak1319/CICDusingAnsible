@@ -10,10 +10,11 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: 'https://github.com/devops4solutions/CI-example.git'
+                git branch: 'master', url: 'https://github.com/shwetak1319/CICDusingAnsible.git'
              
           }
         }
+        /*
          stage('Tools Init') {
             steps {
                 script {
@@ -26,7 +27,7 @@ pipeline {
             }
             }
         }
-     
+     */
         
          stage('Execute Maven') {
            steps {
@@ -39,7 +40,7 @@ pipeline {
          
         
         
-        
+       /* 
         stage('Ansible Deploy') {
              
             steps {
@@ -52,5 +53,6 @@ pipeline {
             
             }
         }
+        */
     }
 }
