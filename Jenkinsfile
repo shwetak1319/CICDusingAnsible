@@ -7,32 +7,23 @@ pipeline {
     }
      
     stages {
-      stage('checkout') {
+      stage('Checkout') {
            steps {
              
                 git branch: 'master', url: 'https://github.com/shwetak1319/CICDusingAnsible.git'
              
           }
         }
-        /*
-         stage('Tools Init') {
-            steps {
-                script {
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-               def tfHome = tool name: 'Ansible'
-                env.PATH = "${tfHome}:${env.PATH}"
-                 sh 'ansible --version'
-                    
-            }
-            }
-        }
-     */
-        
-         stage('Execute Maven') {
+         stage('Build') {
            steps {
              
                 sh 'mvn package'             
+          }
+        }
+        stage('Sonar Scan') {
+           steps {
+             
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible'             
           }
         }
         stage('Ansible Deploy') {
