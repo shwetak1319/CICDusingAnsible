@@ -1,2 +1,2 @@
 - name: copy war file
-  copy: src=./target/LoginWebApp-1.war dest=/opt/apache-tomcat-7.0.61/webapps/
+  copy: src=/var/lib/jenkins/workspace/maven-web-application-1/target dest=/var/lib/tomcat9/webapps/
