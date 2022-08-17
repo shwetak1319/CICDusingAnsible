@@ -87,4 +87,20 @@
           <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-snapshot</url>
        </snapshotRepository>
 </distributionManagement>
+  <pluginRepositories>
+        <pluginRepository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>lti-repo-libs-release</name>
+          <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-release</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>lti-repo-libs-snapshot</name>
+          <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-snapshot</url>
+        </pluginRepository>
+      </pluginRepositories>
 </project>
