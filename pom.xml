@@ -75,7 +75,7 @@
       <sonar.organization>shwetak-lti</sonar.organization>
       <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
-  <!-- <distributionManagement>
+  <distributionManagement>
       <repository>
         <id>central</id>
         <name>lti-repo-libs-release</name>
@@ -87,7 +87,7 @@
           <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-snapshot</url>
        </snapshotRepository>
 </distributionManagement>
-  <pluginRepositories>
+  <!--<pluginRepositories>
         <pluginRepository>
           <snapshots>
             <enabled>false</enabled>
