@@ -77,14 +77,14 @@
   </properties>
   <distributionManagement>
       <repository>
-        <id>lti-repo-libs-release</id>
+        <id>central</id>
         <name>lti-repo-libs-release</name>
-        <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-release/</url>
+        <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-release</url>
        </repository>
     <snapshotRepository>
-        <id>lti-repo-libs-snapshot</id>
+        <id>snapshots</id>
         <name>lti-repo-libs-snapshot</name>
-        <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-snapshot/</url>
+          <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-snapshot</url>
        </snapshotRepository>
 </distributionManagement>
 </project>
