@@ -75,5 +75,11 @@
       <sonar.organization>shwetak-lti</sonar.organization>
       <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
-
+  <distributionManagement>
+      <repository>
+        <id>artifactory</id>
+        <name>lti-maven-remote</name>
+        <url>https://myserver13.jfrog.io/artifactory/lti-maven-remote/</url>
+       </repository>
+</distributionManagement>
 </project>
