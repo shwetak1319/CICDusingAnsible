@@ -78,8 +78,8 @@
   <distributionManagement>
       <repository>
         <id>artifactory</id>
-        <name>lti-libs-release-local</name>
-        <url>https://myserver13.jfrog.io/artifactory/lti-libs-release-local//</url>
+        <name>lti-libs-release</name>
+        <url>https://myserver13.jfrog.io/artifactory/lti-libs-release</url>
        </repository>
 </distributionManagement>
 </project>
