@@ -81,10 +81,10 @@
         <name>lti-repo-libs-release</name>
         <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-release/</url>
        </repository>
-    <repository>
+    <snapshotRepository>
         <id>lti-repo-libs-snapshot</id>
         <name>lti-repo-libs-snapshot</name>
         <url>https://myserver13.jfrog.io/artifactory/lti-repo-libs-snapshot/</url>
-       </repository>
+       </snapshotRepository>
 </distributionManagement>
 </project>
