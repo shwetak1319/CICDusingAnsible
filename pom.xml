@@ -78,8 +78,8 @@
   <distributionManagement>
       <repository>
         <id>artifactory</id>
-        <name>lti-maven-remote</name>
-        <url>https://myserver13.jfrog.io/artifactory/lti-maven-remote/</url>
+        <name>lti-libs-release-local</name>
+        <url>https://myserver13.jfrog.io/artifactory/lti-libs-release-local//</url>
        </repository>
 </distributionManagement>
 </project>
