@@ -38,13 +38,13 @@ pipeline {
                 sh 'mvn deploy'             
           }
         }
-        
+        /*
         stage('Ansible Deploy') {
              
             steps {
                sh "ansible-playbook main.yml -i inventories/dev/hosts --user ubuntu --key-file ~/.ssh/id_rsa"
             }
         }
-        
+        */
     }
 }
