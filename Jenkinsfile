@@ -26,8 +26,14 @@ pipeline {
         }
         stage('Sonar Scan') {
            steps {
-             
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible -DSONAR_TOKEN=44afa76cb36f3a396435c0378ed295faed9fa218'       
+               script{
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible' 
+                qualitygate = waitForQualityGate()                     
+                if (qualitygate.status != "OK") {                         
+                    currentBuild.result = "UNSTABLE"                     
+                     }                 
+                 }
+               }
           }
         }
         /*
