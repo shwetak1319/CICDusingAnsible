@@ -26,6 +26,7 @@ pipeline {
         }
         stage('Sonar Scan') {
            steps {
+                withSonarQubeEnv(credentialsId: '44afa76cb36f3a396435c0378ed295faed9fa218', installationName: 'My SonarQube Server')
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible'
             }
            }
