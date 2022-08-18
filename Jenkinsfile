@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Sonar Scan') {
            steps {
-                withSonarQubeEnv(credentialsId: '44afa76cb36f3a396435c0378ed295faed9fa218', installationName: 'shwetak-lti') {
+                withSonarQubeEnv(credentialsId: 'SONAR_TOKEN', installationName: 'shwetak-lti') {
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible'
              }
            }
