@@ -28,7 +28,7 @@ pipeline {
            steps {
                script{
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible' 
-                qualitygate = waitForQualityGate()                     
+                def qualitygate = waitForQualityGate()
                 if (qualitygate.status != "OK") {                         
                     currentBuild.result = "UNSTABLE"                     
                      }                 
