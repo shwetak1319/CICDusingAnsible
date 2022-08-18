@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+    // Maven install
     tools
     {
        maven "Maven"
