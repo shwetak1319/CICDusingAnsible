@@ -33,8 +33,7 @@ pipeline {
                     currentBuild.result = "UNSTABLE"                     
                      }                 
                  }
-               }
-          }
+           }
         }
         /*
         stage('Upload to Artifactory') {
