@@ -36,7 +36,6 @@ pipeline {
                 error "Pipeline aborted due to quality gate failure: ${qg.status}"
             }
           }
-        }
         /*
         stage('Upload to Artifactory') {
            steps {
