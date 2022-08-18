@@ -26,14 +26,16 @@ pipeline {
         }
         stage('Sonar Scan') {
            steps {
-               script{
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible' 
-                def qualitygate = waitForQualityGate()
-                if (qualitygate.status != "OK") {                         
-                    currentBuild.result = "UNSTABLE"                     
-                     }                 
-                 }
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible'                 
            }
+        }
+        stage("Quality Gate"){
+            timeout(time: 1, unit: 'HOURS')
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK') {
+                error "Pipeline aborted due to quality gate failure: ${qg.status}"
+            }
+          }
         }
         /*
         stage('Upload to Artifactory') {
