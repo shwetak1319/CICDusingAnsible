@@ -36,7 +36,6 @@ pipeline {
                 waitForQualityGate abortPipeline: true
             }
         }
-        /*
         stage('Upload to Artifactory') {
            steps {
              
@@ -49,6 +48,5 @@ pipeline {
                sh "ansible-playbook main.yml -i inventories/dev/hosts --user ubuntu --key-file ~/.ssh/id_rsa"
             }
         }
-        */
     }
 }
