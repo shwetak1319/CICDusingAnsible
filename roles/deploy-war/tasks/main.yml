@@ -1,5 +1,8 @@
 - name: copy war file
   copy: src=/var/lib/jenkins/workspace/CICDusingAnsible/target/CICDusingAnsible-1.war dest=/var/lib/tomcat9/webapps/LTI.war
-
-- name: enable tomcat startup
-    systemd: name: tomcat enabled: yes state: restarted become: true
+  
+- name: Stop tomcat
+  service:
+    name: tomcat
+    state: restarted
+    enabled: yes
