@@ -31,13 +31,11 @@ pipeline {
              }
            }
         }
-        /*
         stage("Quality Gate") {
             steps {
                 waitForQualityGate abortPipeline: true
             }
         }
-        */
         stage('Upload to Artifactory') {
            steps {
              
