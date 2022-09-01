@@ -1,4 +1,3 @@
-
 def call(String repoUrl) {
     pipeline {
         agent any
@@ -44,4 +43,4 @@ def call(String repoUrl) {
             }
         }
     }
-}    
+}
