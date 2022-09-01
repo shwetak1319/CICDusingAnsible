@@ -41,7 +41,8 @@ pipeline {
         }
         stage('Upload to Artifactory') {
            steps {
-                sh 'mvn deploy'             
+                sh 'mvn deploy'    
+              }
           }
         }
     }
