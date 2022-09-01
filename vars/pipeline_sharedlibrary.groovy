@@ -24,18 +24,6 @@ def call(String repoUrl) {
                     sh 'mvn package'             
                   }
               }
-        stage('Sonar Scan') {
-           steps {
-                withSonarQubeEnv(credentialsId: 'SONAR_TOKEN', installationName: 'shwetak-lti') {
-                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CICDusingAnsible'
-             }
-           }
-        }
-        stage("Quality Gate") {
-            steps {
-                waitForQualityGate abortPipeline: true
-            }
-        }
         stage('Upload to Artifactory') {
            steps {
                 sh 'mvn deploy'    
