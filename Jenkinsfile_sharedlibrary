@@ -1,0 +1,2 @@
+@Library('jenkins_sharedlibraries') _
+pipeline_sharedlibrary 'https://github.com/shwetak1319/CICDusingAnsible.git'
