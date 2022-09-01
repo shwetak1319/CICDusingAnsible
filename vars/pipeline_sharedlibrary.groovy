@@ -13,10 +13,9 @@ pipeline {
     stages {
       stage('Checkout') {
            steps {
-             
                 git branch: 'master', url: "${repoUrl}"     
               }
-          }
+          }  
       stage("Cleaning workspace") {
                steps {
                    sh "mvn clean"
@@ -42,8 +41,8 @@ pipeline {
         }
         stage('Upload to Artifactory') {
            steps {
-             
                 sh 'mvn deploy'             
           }
         }
     }
+}    
